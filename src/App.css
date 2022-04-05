@@ -6,17 +6,6 @@
   width: 600px;
   overflow-y: scroll;
 }
-.character-card{
-  display: flex;
-  margin: 16px;
-}
-.character-card__section{
-  margin: 0 0 8px 8px;
-  text-align: left;
-}
-.character-card__content{
-  padding-left: 16px;
-}
 .search-form{
   display:flex;
   flex-direction: column;

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Box, Modal, Typography } from '@mui/material';
 import _ from 'lodash';
+import './CharacterInfoModal.css';
 
 export default function CharacterInfoModal(props) {
     const { handleClose, open, characterId } = props;
@@ -48,25 +49,25 @@ export default function CharacterInfoModal(props) {
                 <Typography id="modal-modal-title" variant="h6" component="h2">
                     {characterInfo.name}
                 </Typography>
-                <Typography sx={{ mt: 2 }}>
+                <Typography sx={{ mt: 1 }}>
                     {characterInfo.status} - {characterInfo.species}
                 </Typography>
-                <Typography sx={{ mt: 2 }}>
+                <Typography sx={{ mt: 1 }}>
                     type: {characterInfo.type}
                 </Typography>
-                <Typography sx={{ mt: 2 }}>
+                <Typography sx={{ mt: 1 }}>
                     gender: {characterInfo.gender}
                 </Typography>
-                <Typography sx={{ mt: 2 }}>
+                <Typography sx={{ mt: 1 }}>
                     created: {date.toLocaleString("en-US", options)}
                 </Typography>
-                <Typography sx={{ mt: 2 }}>
+                <Typography sx={{ mt: 1 }}>
                     episode: {_.map(characterInfo.episode, (ep) => <><a key={ep} href={ep}>{ep.replace(/^\D+/g, '')}</a>{' '}</>)}
                 </Typography>
-                <Typography sx={{ mt: 2 }}>
+                <Typography sx={{ mt: 1 }}>
                     location: <a href={characterInfo?.location?.url}>{characterInfo?.location?.name}</a>
                 </Typography>
-                <Typography  sx={{ mt: 2 }}>
+                <Typography  sx={{ mt: 1 }}>
                     origin: <a href={characterInfo?.origin?.url}>{characterInfo?.origin?.name}</a>
                 </Typography>
             </Box>

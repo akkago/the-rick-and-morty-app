@@ -1,10 +1,10 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import _ from 'lodash';
-import ControlledSelect from './ControlledSelect';
-import CharacterCard from './CharacterCard';
+import ControlledSelect from './components/ControlledSelect/ControlledSelect';
+import CharacterCard from './components/CharacterCard/CharacterCard';
 import { Box, Button, List, Pagination, TextField } from '@mui/material';
-import CharacterInfoModal from './CharacterInfoModal';
+import CharacterInfoModal from './components/CharacterInfoModal/CharacterInfoModal';
 
 function App() {
   const [cards, setCards] = useState();

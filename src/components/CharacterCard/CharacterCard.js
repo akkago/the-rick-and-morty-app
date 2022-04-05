@@ -1,5 +1,6 @@
 import { Avatar, Divider, ListItem, ListItemAvatar, ListItemText, Typography } from '@mui/material';
 import * as React from 'react';
+import './CharacterCard.css';
 
 export default function CharacterCard(props) {
     const { item, onClick } = props;
