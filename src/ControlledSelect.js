@@ -1,12 +1,10 @@
 import * as React from 'react';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import _ from 'lodash';
+import { MenuItem, Select } from '@mui/material';
 
-export default function ControlledRadioButtonsGroup(props) {
+export default function ControlledSelect(props) {
   const [value, setValue] = React.useState('');
   const { id, onChange, controlsNames } = props;
   const handleChange = (event) => {
@@ -18,14 +16,16 @@ export default function ControlledRadioButtonsGroup(props) {
   return (
     <FormControl>
       <FormLabel id="demo-controlled-radio-buttons-group">{id}</FormLabel>
-      <RadioGroup
-        aria-labelledby="demo-controlled-radio-buttons-group"
+      <Select
+        labelId="demo-simple-select-label"
         name="controlled-radio-buttons-group"
         value={value}
+        label={value}
+        size='small'
         onChange={handleChange}
       >
-        {_.map(controlsNames, (name) => <FormControlLabel value={name} key={name} control={<Radio />} label={name} />)}
-      </RadioGroup>
+        {_.map(controlsNames, (name) => <MenuItem value={name} key={name}>{name}</MenuItem>)}
+      </Select>
     </FormControl>
   );
 }
